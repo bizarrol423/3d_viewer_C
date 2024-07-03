@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="MyOpenGLWidget" name="MyWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>10</y>
+      <width>820</width>
+      <height>830</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">MyOpenGLWidget
+{
+background-color:rgb(25, 25, 25);
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>841</x>
+      <y>12</y>
+      <width>33</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Файл</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="box_file_name">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>7</y>
+      <width>591</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+background-color:rgb(25, 25, 25);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="download_file">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>90</y>
+      <width>129</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Загрузить файл</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="But_color_back">
+    <property name="geometry">
+     <rect>
+      <x>1110</x>
+      <y>130</y>
+      <width>96</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цвет фона</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_44">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>170</y>
+      <width>40</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Линии</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="But_color_line">
+    <property name="geometry">
+     <rect>
+      <x>1015</x>
+      <y>190</y>
+      <width>102</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цвет линий</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="line_attribute">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>190</y>
+      <width>117</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentText">
+     <string>Сплошная</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>Нет</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Сплошная</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Пунктир</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_46">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>230</y>
+      <width>47</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Размер</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="size_line">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>230</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_45">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>260</y>
+      <width>59</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вершины</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="But_color_vertex">
+    <property name="geometry">
+     <rect>
+      <x>1003</x>
+      <y>280</y>
+      <width>112</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цвет вершин</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="vertex_attribute">
+    <property name="geometry">
+     <rect>
+      <x>1163</x>
+      <y>280</y>
+      <width>105</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentText">
+     <string>Круг</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>Нет</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Круг</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Квадрат</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_47">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>320</y>
+      <width>47</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Размер</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="size_vertex">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>320</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_39">
+    <property name="geometry">
+     <rect>
+      <x>1110</x>
+      <y>350</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Перемещение</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_36">
+    <property name="geometry">
+     <rect>
+      <x>921</x>
+      <y>380</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spin_mov_X">
+    <property name="geometry">
+     <rect>
+      <x>938</x>
+      <y>380</y>
+      <width>79</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-10000</number>
+    </property>
+    <property name="maximum">
+     <number>10000</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_33">
+    <property name="geometry">
+     <rect>
+      <x>922</x>
+      <y>416</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spin_mov_Y">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>415</y>
+      <width>79</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-10000</number>
+    </property>
+    <property name="maximum">
+     <number>10000</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_37">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>451</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spin_mov_Z">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>450</y>
+      <width>79</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-10000</number>
+    </property>
+    <property name="maximum">
+     <number>10000</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_40">
+    <property name="geometry">
+     <rect>
+      <x>1110</x>
+      <y>520</y>
+      <width>65</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вращение</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QDial" name="dial_rot_X">
+    <property name="geometry">
+     <rect>
+      <x>1006</x>
+      <y>547</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>359</number>
+    </property>
+   </widget>
+   <widget class="QDial" name="dial_rot_Y">
+    <property name="geometry">
+     <rect>
+      <x>1106</x>
+      <y>548</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>359</number>
+    </property>
+   </widget>
+   <widget class="QDial" name="dial_rot_Z">
+    <property name="geometry">
+     <rect>
+      <x>1209</x>
+      <y>546</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>359</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_38">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>630</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spin_rot_X">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>628</y>
+      <width>43</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>359</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_41">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>632</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spin_rot_Y">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>630</y>
+      <width>43</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>359</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_42">
+    <property name="geometry">
+     <rect>
+      <x>1230</x>
+      <y>630</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spin_rot_Z">
+    <property name="geometry">
+     <rect>
+      <x>1250</x>
+      <y>628</y>
+      <width>43</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>359</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_43">
+    <property name="geometry">
+     <rect>
+      <x>1114</x>
+      <y>690</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Масштаб</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="spin_scale">
+    <property name="geometry">
+     <rect>
+      <x>1114</x>
+      <y>720</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>0.100000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.500000000000000</double>
+    </property>
+    <property name="value">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_48">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>755</y>
+      <width>62</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Проекция</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="projection_type">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>750</y>
+      <width>142</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentText">
+     <string>Центральная</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>Центральная</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Параллельная</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="screenshot_button">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>790</y>
+      <width>97</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>screenshot</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="create_gif">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>830</y>
+      <width>46</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>gif</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="gif_progress">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>870</y>
+      <width>95</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>49</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reset">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>900</y>
+      <width>141</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сбросить данные</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_mov_X">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>380</y>
+      <width>371</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-10000</number>
+    </property>
+    <property name="maximum">
+     <number>10000</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_mov_Y">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>415</y>
+      <width>371</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-10000</number>
+    </property>
+    <property name="maximum">
+     <number>10000</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_mov_Z">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>450</y>
+      <width>371</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-10000</number>
+    </property>
+    <property name="maximum">
+     <number>10000</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="show_color_back">
+    <property name="geometry">
+     <rect>
+      <x>1212</x>
+      <y>135</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+background-color: black;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="show_color_line">
+    <property name="geometry">
+     <rect>
+      <x>1122</x>
+      <y>194</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+background-color: black;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="show_color_vertex">
+    <property name="geometry">
+     <rect>
+      <x>1123</x>
+      <y>284</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+background-color: black;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_44</zorder>
+   <zorder>label_46</zorder>
+   <zorder>size_line</zorder>
+   <zorder>label_45</zorder>
+   <zorder>vertex_attribute</zorder>
+   <zorder>label_47</zorder>
+   <zorder>size_vertex</zorder>
+   <zorder>spin_rot_X</zorder>
+   <zorder>spin_rot_Y</zorder>
+   <zorder>spin_rot_Z</zorder>
+   <zorder>label_48</zorder>
+   <zorder>projection_type</zorder>
+   <zorder>reset</zorder>
+   <zorder>MyWidget</zorder>
+   <zorder>label_4</zorder>
+   <zorder>download_file</zorder>
+   <zorder>box_file_name</zorder>
+   <zorder>label_33</zorder>
+   <zorder>label_36</zorder>
+   <zorder>label_37</zorder>
+   <zorder>label_39</zorder>
+   <zorder>dial_rot_X</zorder>
+   <zorder>spin_mov_X</zorder>
+   <zorder>spin_mov_Y</zorder>
+   <zorder>spin_mov_Z</zorder>
+   <zorder>label_40</zorder>
+   <zorder>label_38</zorder>
+   <zorder>dial_rot_Y</zorder>
+   <zorder>label_41</zorder>
+   <zorder>dial_rot_Z</zorder>
+   <zorder>label_42</zorder>
+   <zorder>label_43</zorder>
+   <zorder>spin_scale</zorder>
+   <zorder>But_color_vertex</zorder>
+   <zorder>But_color_line</zorder>
+   <zorder>But_color_back</zorder>
+   <zorder>line_attribute</zorder>
+   <zorder>screenshot_button</zorder>
+   <zorder>create_gif</zorder>
+   <zorder>gif_progress</zorder>
+   <zorder>slider_mov_X</zorder>
+   <zorder>slider_mov_Y</zorder>
+   <zorder>slider_mov_Z</zorder>
+   <zorder>show_color_back</zorder>
+   <zorder>show_color_line</zorder>
+   <zorder>show_color_vertex</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1500</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyOpenGLWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">myopenglwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
